@@ -51,5 +51,40 @@ h1{
   <h1>Welcome</h1>
 </div>
 
-</body>
+<body>
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+  
+  <div id="id01" class="modal">
+    
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="https://imgs.search.brave.com/bKCxLJibdpv57NWXK8aBf8xWhiblpv4ecjzH9dWskes/rs:fit:980:980:1/g:ce/aHR0cDovL2Nkbi5v/bmxpbmV3ZWJmb250/cy5jb20vc3ZnL2lt/Z18xNTAxNzAucG5n" alt="Avatar" class="avatar"> 
+      </div>
+  
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+          
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+  
+  <script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+  </script>
+  
+  </body>
 </html>
